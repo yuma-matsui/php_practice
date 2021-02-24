@@ -3,13 +3,13 @@
     public $name; // 商品名
     private $price; // 価格
 
-    //コンストラクター
+    // コンストラクター __construct
     public function __construct($name, $price = 0){
       $this->name = $name;
       $this->price = $price;
     }
 
-    //価格を設定する
+    // 価格を設定する setter
     public function setPrice($price){
       if($price < 0){
         return false;
@@ -18,7 +18,7 @@
       return true;
     }
 
-    // 価格を取得する
+    // 価格を取得する getter
     public function getPrice($end = '') {
       return number_format($this->price) . $end;
     }
